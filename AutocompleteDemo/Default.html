@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Based on jQuery Autocomplete: http://jqueryui.com/autocomplete/ -->
+    <title>Autocomplete Demo</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet" />
+
+    <script>
+        $(function () {
+            $("#txtSearch").autocomplete({
+                source: '/Autocomplete.ashx',
+                autoFocus: true,
+                delay: 500,
+                minLength: 1
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <div class="ui-widget">
+            <label for="txtSearch">Search:</label>
+            <input name="txtSearch" type="text" id="txtSearch">
+        </div>
+    </form>
+</body>
+</html>
